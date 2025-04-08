@@ -4,11 +4,12 @@
 
 ## Introduction
 
-Welcome to Coinflip! Instead of becoming addicted to spending real money on App Store games
-betting on loot boxes, learn how gambling eventually leads to ruin in a safe, controlled and fun environment.
+Welcome to Coinflip! Instead of becoming addicted to spending real money on App Store games betting on loot boxes,
+**teenagers (12-15 years old)** can learn how gambling always leads to ruin in a safe, controlled and fun
+environment.
 
-Coinflip simulates a gambling environment using a simple coin flip game,
-but takes away the risk and danger of actual gambling.
+In other words, Coinflip helps teenagers simulate a gambling environment using a simple coin flip game,
+but takes away the risk and danger of actual gambling and betting.
 
 ## Table of Contents
 
@@ -86,6 +87,9 @@ Example of usage:
 ### Changing betting amount: `change`
 
 Sets betting amount to be used in subsequent flips.
+
+`<number representing new bet amount>` should be a non-negative integer typed in numerals (e.g. 50, not fifty) which
+does not exceed your current coin balance.
 
 Format: `change <number representing new bet amount>`
 
