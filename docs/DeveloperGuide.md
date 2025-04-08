@@ -374,10 +374,13 @@ on a coin flip, and educate them about the dangers of gambling.
 ## Appendix D: Glossary
 
 * *balance* - Number of coins possessed by the user
+* *bet amount* - Number of coins won or lost by the user during a coin flip
 * *win* - When a user successfully predicts the outcome of a coin flip
 * *lose* - When a user does not successfully predict the outcome of a coin flip
 * *win streak* - Number of consecutive successful coin flips performed by the user
 * *lose streak* - Number of consecutive unsuccessful coin flips performed by the user
+* *achievement* - A virtual accomplishment that congratulates the user when unlock (e.g. there is an achievement for
+  playing 100 coin flips in total)
 
 ## Appendix E: Instructions for Manual Testing
 
