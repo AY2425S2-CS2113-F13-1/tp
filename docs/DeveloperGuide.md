@@ -128,7 +128,7 @@ Consists of the following classes:
 Consists of the following classes:
 
 * `Printer`: Handles printing of output for the user
-* `Animation` (circled A for abstract) and subclasses: Handles printing of animated output, used only by `Printer`
+* `Animation` (abstract) and subclasses: Handles printing of animated output, used only by `Printer`
 
 ### User Input Component
 
@@ -142,7 +142,7 @@ Consists of the following classes:
 
 Consists of the following classes:
 
-* `Command` (circled A for abstract) and subclasses: Handles logic and output for each command
+* `Command` (abstract) and subclasses: Handles logic and output for each command
 
 ### Model Component
 
