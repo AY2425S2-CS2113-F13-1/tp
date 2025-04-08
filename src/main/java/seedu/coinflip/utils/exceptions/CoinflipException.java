@@ -6,8 +6,8 @@ public class CoinflipException extends Exception {
     public static final String ANIMATION_ERROR = "Sorry! My animation timer has stopped working. " +
             "Let's proceed.";
 
-    public static final String CHANGE_INVALID_FORMAT = "Invalid command format!\n " +
-            "Please follow this format: change <number representing new bet amount>\n" +
+    public static final String CHANGE_INVALID_FORMAT = "Invalid command format! " +
+            "Please follow this format: change <number representing new bet amount>\n\n" +
             "<number representing new bet amount> should be a non-negative integer\n" +
             "typed in numerals (e.g. 50, not fifty) which does not exceed your\n" +
             "current coin balance and does not have leading zeroes.";
