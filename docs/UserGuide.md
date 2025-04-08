@@ -142,13 +142,19 @@ Example of usage:
 **Q**: Are there any keyboard inputs I should avoid?
 
 **A**: Yes, avoid using **modifier keys**, such as Shift, Ctrl, Cmd, Win and Alt in your commands (e.g. Ctrl-Z), as
-these inputs may not be parsed by the program correctly, leading to erratic but expected behaviour. Due to said
+these inputs may not be parsed by the program correctly, leading to erratic but expected behaviour.
+
+Due to said
 behaviour differing across operating systems, we do not currently plan to make the program handle such cases; we've
 opted to document it in this user guide instead.
+
+<br>
 
 **Q**: Can I place extra words after my commands? (e.g. `check bet yay`)
 
 **A**: No, they will be rejected as invalid commands.
+
+<br>
 
 **Q**: Can I bet with 0 coins? Can I bet when I have 0 coins?
 
@@ -158,16 +164,23 @@ it's a futile endeavour, you're addicted! Use this experience to think about how
 However, if you'd like to share Coinflip, or try different strategies under the belief that "there's a way to win",
 you can reset your coin balance using the `reset` command.
 
+<br>
+
 **Q**: Will my data be automatically saved when I exit the program?
 
 **A**: Yes, it will be saved in a save file.
+
+<br>
 
 **Q**: How do I transfer my data to another computer?
 
 **A**: When you start Coinflip for the first time, there will be a `data` folder
 in the same directory as Coinflip's .jar file.
+
 Transfer this folder to the same directory as the .jar on the other computer,
 and your save data will be transferred.
+
+<br>
 
 **Q**: Can I edit the save file?
 
@@ -179,6 +192,8 @@ This is because changing the values in the save file, for example the balance, w
 defeat the purpose of the game, which is to simulate gambling and allow the user to
 experience its consequences.
 
+<br>
+
 **Q**: If I swap column labels in the save file, will the data still be loaded correctly?
 
 **A**: The column labels in the first line of the .csv file are there for the user to have
@@ -188,6 +203,8 @@ If the user swaps the column labels, the program will still load data according 
 original column order, and the save file will overwrite the column labels to the original state upon the next save.
 
 Since there is no reason to require them swapped, this is not a bug.
+
+<br>
 
 **Q**: What is the correct format for the save file?
 
@@ -207,16 +224,24 @@ to do so, and this is expected behaviour.
 The reason is that the text commands already provide all expected user functionality, and the program creates
 correctly formatted save files, so handling user modification is out of scope.
 
+<br>
+
 **Q**: What happens if I played such that my balance exceeds 9 digits in length? E.g. `1000000000`
 
-**A**: It will be capped at `999999999` if it exceeds `999999999`. The same goes for all other numerical values shown in
-the game.
+**A**: It will be capped at `999999999` if it exceeds `999999999`. The same goes for all other numerical values shown
+in the game.
+
+<br>
 
 **Q**: Why does `"Warning: Coinflip could not save your save file! Your progress will not be saved."` appear?
 
 **A**: This is likely due to your save file being open while you run the program and is to be expected.
-It is not a bug. Please close your save file and try again. Alternatively, the warning could have appeared if you have
-changed the properties of the .csv file to read-only (but why would you... right?)
+It is not a bug. Please close your save file and try again.
+
+Alternatively, the warning could have appeared if you have changed the properties of the .csv file to read-only (but why
+would you... right?)
+
+<br>
 
 ## Command Summary
 
