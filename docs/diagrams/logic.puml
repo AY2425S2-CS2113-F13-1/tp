@@ -1,35 +1,78 @@
 @startuml
+hide circle
 skinparam classAttributeIconSize 0
 
-abstract class Command
+abstract "{abstract} \n Command" {
+    {abstract} +execute()
+}
 
-class ChangeCommand
-class CheckCommand
-class ExitCommand
-class FlipCommand
-class HelpCommand
-class ResetCommand
+class ChangeCommand {
+    +execute()
+}
 
-class Storage
-class UserData
-class AchievementList
+class CheckCommand {
+    +execute()
+}
 
-Command <|-- ChangeCommand
-Command <|-- CheckCommand
-Command <|-- ExitCommand
-Command <|-- FlipCommand
-Command <|-- HelpCommand
-Command <|-- ResetCommand
+class ExitCommand {
+    +execute()
+}
 
-ChangeCommand --> Storage
+class FlipCommand {
+    +execute()
+}
+
+class HelpCommand {
+    +execute()
+}
+
+class ResetCommand {
+    +execute()
+}
+
+class Storage {
+    +saveData(UserData)
+}
+
+class UserData {
+   +balance : int
+   +betAmount : int
+   +winCount : int
+   +loseCount : int
+   +totalWon : int
+   +totalLost : int
+}
+
+class AchievementList {
++update(UserData, Boolean)
++getPrintString() : String
+}
+
+"{abstract} \n Command" <|-- ChangeCommand
+"{abstract} \n Command" <|-- CheckCommand
+"{abstract} \n Command" <|-- ExitCommand
+"{abstract} \n Command" <|-- FlipCommand
+"{abstract} \n Command" <|-- HelpCommand
+"{abstract} \n Command" <|-- ResetCommand
+
 ChangeCommand --> UserData
+ChangeCommand ..> Printer
+ChangeCommand --> Storage
 
 CheckCommand --> UserData
+CheckCommand ..> Printer
 
-FlipCommand --> Storage
 FlipCommand --> UserData
 FlipCommand --> AchievementList
+FlipCommand --> Storage
+FlipCommand ..> Printer
+
+HelpCommand ..> Printer
 
 ResetCommand --> Storage
 ResetCommand --> UserData
+ResetCommand ..> Printer
+
+ExitCommand ..> Printer
+
 @enduml

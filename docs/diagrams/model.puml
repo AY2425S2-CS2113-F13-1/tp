@@ -1,27 +1,54 @@
 @startuml
+hide circle
+skinparam classAttributeIconSize 0
 
-' Core data classes
-class UserData
-class AchievementList
+class UserData {
+   +currentWinStreak : int
+   +currentLoseStreak : int
+   +highestWinStreak : int
+   +highestLoseStreak : int
+   +winCount : int
+   +loseCount : int
+}
 
-' Abstract base class
-abstract class Achievement
+abstract "{abstract} \n Achievement" {
+    {abstract} +update(UserData, Boolean)
+}
 
-' Subclasses of Achievement
-class GamesAchievement
-class LoseStreakAchievement
-class WinCountAchievement
-class WinStreakAchievement
+class AchievementList {
+    +update(UserData, Boolean)
+}
 
-' Inheritance
-GamesAchievement --|> Achievement
-LoseStreakAchievement --|> Achievement
-WinCountAchievement --|> Achievement
-WinStreakAchievement --|> Achievement
+class GamesAchievement {
+    +update(UserData, Boolean)
+}
 
-' Dependencies
-AchievementList --> Achievement
+class LoseStreakAchievement {
+    +update(UserData, Boolean)
+}
+
+class WinCountAchievement {
+    +update(UserData, Boolean)
+}
+
+class LoseCountAchievement {
+    +update(UserData, Boolean)
+}
+
+class WinStreakAchievement {
+    +update(UserData, Boolean)
+}
+
+
+GamesAchievement --|> "{abstract} \n Achievement"
+LoseStreakAchievement --|> "{abstract} \n Achievement"
+WinCountAchievement --|> "{abstract} \n Achievement"
+WinStreakAchievement --|> "{abstract} \n Achievement"
+LoseCountAchievement --|> "{abstract} \n Achievement"
+
+
+AchievementList -- "{abstract} \n Achievement"
 AchievementList ..> UserData
-Achievement ..> UserData
+"{abstract} \n Achievement" ..> UserData
 
 @enduml
