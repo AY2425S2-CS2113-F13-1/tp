@@ -89,7 +89,7 @@ Example of usage:
 Sets betting amount to be used in subsequent flips.
 
 `<number representing new bet amount>` should be a non-negative integer typed in numerals (e.g. 50, not fifty) which
-does not exceed your current coin balance.
+does not exceed your current coin balance and does not have leading zeroes.
 
 Format: `change <number representing new bet amount>`
 
@@ -213,7 +213,7 @@ Coinflip and look at the save file. There are also additional restrictions:
 
 * All values must be separated using commas `,` without spaces between them
 * All values must be non-negative integers typed out numerically (e.g. `50`, not `fifty`)
-* All values must be lower than 10 digits in length
+* All values must be shorter than 10 characters in length
 * Either the `Current Win Streak` or `Current Lose Streak` value must be 0.
 * `Highest Win Streak` must be equal to or greater than `Current Win Streak`.
 * `Highest Lose Streak` must be equal to or greater than `Current Lose Streak`.

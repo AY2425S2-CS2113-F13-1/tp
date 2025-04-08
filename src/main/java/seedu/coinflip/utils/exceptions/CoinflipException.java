@@ -9,18 +9,18 @@ public class CoinflipException extends Exception {
     public static final String CHANGE_INVALID_FORMAT = "Invalid command format!\n " +
             "Please follow this format: change <number representing new bet amount>\n" +
             "<number representing new bet amount> should be a non-negative integer\n" +
-            "typed in numerals (e.g. 50, not fifty) which does not exceed your current coin balance.";
+            "typed in numerals (e.g. 50, not fifty) which does not exceed your\n" +
+            "current coin balance and does not have leading zeroes.";
 
     public static final String CHANGE_BET_AMOUNT_INVALID = "Invalid bet amount!\n" +
             "Please provide a non-negative integer typed in numerals (e.g. 50, not fifty)\n" +
-            "which does not exceed your current coin balance.";
+            "which does not exceed your current coin balance and does not have leading zeroes.";
 
     public static final String CHANGE_BET_AMOUNT_EXCEEDS_BALANCE = "Your desired bet amount is " +
-            "more than you currently have! " +
-            "Please choose another bet amount.";
+            "more than you currently have! Please choose another bet amount.";
 
-    public static final String CHANGE_BET_AMOUNT_TOO_LARGE = "Your desired bet amount is too large! " +
-            "Please choose a smaller bet amount.";
+    public static final String CHANGE_BET_AMOUNT_TOO_LARGE = "Your desired bet amount is too long! " +
+            "Please give a shorter input.";
 
     public static final String CHECK_INVALID_FORMAT = "Invalid command format! " +
             "Please follow this format: check <bet>/<balance>/<history>";
